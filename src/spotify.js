@@ -1,9 +1,9 @@
 export const authEndpoint = 'https://accounts.spotify.com/authorize';
-
 const redirectUri = "http://localhost:3000/";
-
 const clientId = "d3a1dbdcd3664b8fb4101206df01c0e0";
 
+
+// Permisos que le das al usuario en tu aplicacion
 const scopes = [
     "user-read-currently-playing",
     "user-read-recently-played",
@@ -12,6 +12,7 @@ const scopes = [
     "user-modify-playback-state"
 ];
 
+//Obtenemos el token desde la URL
 export const getTokenFromUrl = () => {
     return window.location.hash
     .substring(1)

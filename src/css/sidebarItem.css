@@ -1,0 +1,10 @@
+.sidebarItem {
+    color: grey;
+    height: 40px;
+    cursor: pointer;
+    transition: 200ms color ease-in;
+}
+
+.sidebarItem:hover {
+    color: white;
+}
