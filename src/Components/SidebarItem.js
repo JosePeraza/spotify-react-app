@@ -4,7 +4,8 @@ import "../css/sidebarItem.css";
 function SidebarItem({ title, Icon }) {
     return (
         <div className="sidebarItem">
-            <p>{title}</p>
+            {Icon && <Icon className="sidebarIcon"/>}
+            {Icon ? <h4>{title}</h4> : <p>{title}</p>}
         </div>
     )
 }
