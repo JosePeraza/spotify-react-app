@@ -8,7 +8,7 @@ import { useDatalayerValue } from '../DataLayer';
 import SongRow from './SongRow';
 
 function Body({ spotify }) {
-    const [{ new_releases }, dispatch] = useDatalayerValue();
+    const [{ new_releases }] = useDatalayerValue();
 
     return (
         <div className="body">
@@ -32,7 +32,7 @@ function Body({ spotify }) {
                     <MoreHorizIcon />
                 </div>
                 {new_releases?.tracks.items.map(item => (
-                    <SongRow track={item.track} />
+                    <SongRow key={item.id} track={item.track} />
                 ))}
             </div>
         </div>
