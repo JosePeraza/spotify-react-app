@@ -57,7 +57,7 @@ function App() {
       
     }
     console.log(spotify.getPlaylist('6YBNnMxHFtBMakBI3H2Jct'));
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="app">
