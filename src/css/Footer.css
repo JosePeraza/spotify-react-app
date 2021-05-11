@@ -38,10 +38,20 @@
     max-width: 300px;
 }
 
-.footer_icon:hover,
-.footer_green:hover {
-    transition: transform 0.2s ease-in-out;
+.footer_icon {
+    color: gray;
+}
+
+.footer_icon:hover {
+    transition: transform 0.1s ease-in-out;
     transform: scale(1.2) !important;
+    color: white;
+}
+
+.footer_green:hover {
+    transition: transform 0.1s ease-in-out;
+    transform: scale(1.2) !important;
+    color:#70f89f;
 }
 
 .footer_right {
