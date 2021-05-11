@@ -5,7 +5,7 @@ import { getTokenFromUrl } from './spotify';
 import SpotifyWebAPI from 'spotify-web-api-js';
 import Player from './Components/Player';
 import { useDatalayerValue } from './DataLayer';
-// import makeRequest from './makeRequest';
+import makeRequest from './makeRequest';
 
 
 const spotify = new SpotifyWebAPI();
@@ -14,9 +14,9 @@ const spotify = new SpotifyWebAPI();
 function App() {
   const [{ token }, dispatch] = useDatalayerValue();
 
-  // useEffect(() => {
-  //   console.log(makeRequest());
-  // }, []);
+  useEffect(() => {
+    console.log(makeRequest());
+  }, []);
 
   // Entregamos el token y renderizamos la pagina
   useEffect(() => {
