@@ -8,6 +8,7 @@ import { useDatalayerValue } from './DataLayer';
 import makeRequest from './makeRequest';
 
 
+
 const spotify = new SpotifyWebAPI();
 
 
@@ -54,9 +55,23 @@ function App() {
           new_releases: response,
         });
       });
+
+      spotify.getFeaturedPlaylists().then(response => {
+        dispatch({
+          type: 'SET_FEATURED_PLAYLISTS',
+          featured_playlists: response,
+        });
+      });
+      
+      spotify.getCategories().then(response => {
+        dispatch({
+          type: 'SET_CATEGORIES',
+          categories: response,
+        });
+      });
       
     }
-    console.log(spotify.getPlaylist('6YBNnMxHFtBMakBI3H2Jct'));
+    
   }, [dispatch]);
 
   return (
@@ -65,7 +80,8 @@ function App() {
       token ? (
         <Player spotify={spotify}/>
       ) : (
-        <Login />
+          <Login />
+        
       )
     }
     </div>

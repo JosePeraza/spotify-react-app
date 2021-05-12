@@ -15,7 +15,7 @@ function Footer() {
     return (
         <div className="footer">
             <div className="footer_left">
-                <img className="footer_albumLogo" src="" alt="" />
+                <img className="footer_albumLogo" src="https://upload.wikimedia.org/wikipedia/en/9/9f/Room_on_Fire_cover.jpg" alt="" />
                 <div className="footer_songInf">
                     <h4>Reptilia</h4>
                     <p>The strokes</p>
@@ -31,7 +31,7 @@ function Footer() {
             <div className="footer_right">
                 <Grid container spacing={2}>
                     <Grid item>
-                         <PlaylistPlayIcon />   
+                         <PlaylistPlayIcon  />   
                     </Grid>
                     <Grid item>
                         <VolumeDownIcon />

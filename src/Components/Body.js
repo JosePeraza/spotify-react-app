@@ -5,10 +5,11 @@ import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import { useDatalayerValue } from '../DataLayer';
-import SongRow from './SongRow';
+import SongRowItem from './SongRow';
+import Grid from '@material-ui/core/Grid';
 
 function Body({ spotify }) {
-    const [{ new_releases }] = useDatalayerValue();
+    const [{ new_releases, categories, featured_playlists }] = useDatalayerValue();
 
     return (
         <div className="body">
@@ -31,9 +32,38 @@ function Body({ spotify }) {
                     <FavoriteIcon fontSize="large"/>
                     <MoreHorizIcon />
                 </div>
-                {new_releases?.tracks.items.map(item => (
-                    <SongRow key={item.id} track={item.track} />
-                ))}
+                <div className="songRow_container">
+                    <h2><strong>New Releases</strong></h2>
+                    <div className="body_songRow">
+                        {new_releases?.tracks.items.map(item => (
+                            <SongRowItem key={item.id} 
+                            image={item.track.album.images[0].url} 
+                            title={item.track.name} 
+                            artist={item.track.artists.map((artist) => artist.name).join(", ")} 
+                            album={item.track.album.name}  />
+                        ))}
+                    </div>
+                </div>
+                <div className="songRow_container">
+                    <h2><strong>Featured Playlists</strong></h2>
+                    <div className="body_songRow">
+                        {featured_playlists?.playlists.items.map(item => (
+                            <SongRowItem key={item.id}
+                            image={item.images[0].url} 
+                            title={item.name} />
+                        ))}
+                    </div>
+                </div>
+                <div className="songRow_container">
+                    <h2><strong>Categories</strong></h2>
+                    <div className="body_songRow">
+                        {categories?.categories.items.map(item => (
+                            <SongRowItem key={item.id}
+                            image={item.icons[0].url} 
+                            title={item.name} />
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     )

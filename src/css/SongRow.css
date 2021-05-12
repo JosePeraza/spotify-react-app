@@ -1,32 +1,48 @@
-.songRow {
+
+
+.songRow_card{
     margin-left: 20px;
     padding: 20px;
-    display: flex;
-    align-items: center;
-    color: white;
+    width: 200px;
+    color: white !important;
+    background-color: #181818 !important; 
 }
 
-.songRow:hover {
+.songRow_card:hover {
     cursor: pointer;
-    background-color: black;
-    opacity: 0.8;
+    background-color: #282828;
+    transition: 0.2s color ease-in;
 }
 
-.songRow_info {
-    margin-left: 20px;
-}
 
 .songRow_info > h1 {
     font-size: 16px;
 }
 
-.songRow_info > p {
-    font-size: 14px;
-    margin-top: 3px;
-    color: gray;
+.songRow_info {
+    color: gray !important;
 }
 
 .songRow_album {
-    height: 40px;
-    width: 40px;
+    width: 100%;
+    height: auto;
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+   }
+   ::-webkit-scrollbar-thumb {
+    background: #545454;
+    border-radius: 15px;
+   }
+   ::-webkit-scrollbar-thumb:hover{
+    background: #666666;
+   }
+   ::-webkit-scrollbar-track{
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: inset 7px 10px 30px #696969;
+   }
+
+

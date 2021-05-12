@@ -61,4 +61,30 @@
     font-size: 14px;
 }
 
+.body_songRow {
+    display: flex;
+    overflow: auto;
+}
+
+.songRow_container {
+    padding: 20px 20px;
+}
+
+.songRow_container > strong{
+        z-index: 2;
+        padding: 4px 8px;
+}
+
+.songRow_container > span {
+        font-size: .7em;
+        color: #aaa;
+        margin-left: 10px;
+}
+
+.songRow_container > h2 {
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+
 
