@@ -6,12 +6,13 @@
     width: 200px;
     color: white !important;
     background-color: #181818 !important; 
+    transition: 0.2s ease-in-out !important;
 }
 
 .songRow_card:hover {
     cursor: pointer;
-    background-color: #282828;
-    transition: 0.2s color ease-in;
+    background-color: #282828 !important;
+    
 }
 
 

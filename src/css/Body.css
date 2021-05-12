@@ -45,6 +45,7 @@
 
 .body_songs {
     margin: 20px -30px;
+    margin-bottom: -1000px ;
 }
 
 .body_shuffle:hover {
@@ -68,6 +69,7 @@
 
 .songRow_container {
     padding: 20px 20px;
+    overflow-y: auto;
 }
 
 .songRow_container > strong{

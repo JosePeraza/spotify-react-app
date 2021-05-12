@@ -1,10 +1,11 @@
 .footer {
-    position: fixed;
     display: flex;
     justify-content: space-between;
-    bottom: 0;
     height: 65px;
     width: 98%;
+    position: fixed;
+    margin-bottom: -100;
+    bottom: 0;
     color: white;
     background-color: #282828;
     padding: 20px;
