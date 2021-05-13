@@ -1,18 +1,18 @@
 import React from 'react';
 import "../css/Body.css";
+import "../css/Themes.css";
 import Header from './Header';
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import { useDatalayerValue } from '../DataLayer';
 import SongRowItem from './SongRow';
-import Grid from '@material-ui/core/Grid';
 
 function Body({ spotify }) {
-    const [{ new_releases, categories, featured_playlists }] = useDatalayerValue();
+    const [{ new_releases, categories, featured_playlists, lightmode }] = useDatalayerValue();
 
     return (
-        <div className="body">
+        <div className={`body ${lightmode === false ? `dark_body`: `bright_body`}`}>
             <Header spotify={spotify}/>
 
             <div className="body_info">
@@ -33,7 +33,7 @@ function Body({ spotify }) {
                     <MoreHorizIcon />
                 </div>
                 <div className="songRow_container">
-                    <h2><strong>New Releases</strong></h2>
+                    <h2><strong>New Releases</strong><span className="outer_line"></span></h2>
                     <div className="body_songRow">
                         {new_releases?.tracks.items.map(item => (
                             <SongRowItem key={item.id} 
@@ -45,7 +45,7 @@ function Body({ spotify }) {
                     </div>
                 </div>
                 <div className="songRow_container">
-                    <h2><strong>Featured Playlists</strong></h2>
+                    <h2><strong>Featured Playlists</strong><span className="outer_line"></span></h2>
                     <div className="body_songRow">
                         {featured_playlists?.playlists.items.map(item => (
                             <SongRowItem key={item.id}
@@ -55,7 +55,7 @@ function Body({ spotify }) {
                     </div>
                 </div>
                 <div className="songRow_container">
-                    <h2><strong>Categories</strong></h2>
+                    <h2><strong>Categories</strong><span className="outer_line"></span></h2>
                     <div className="body_songRow">
                         {categories?.categories.items.map(item => (
                             <SongRowItem key={item.id}

@@ -5,7 +5,6 @@ import { getTokenFromUrl } from './spotify';
 import SpotifyWebAPI from 'spotify-web-api-js';
 import Player from './Components/Player';
 import { useDatalayerValue } from './DataLayer';
-import makeRequest from './makeRequest';
 
 
 
@@ -15,10 +14,7 @@ const spotify = new SpotifyWebAPI();
 function App() {
   const [{ token }, dispatch] = useDatalayerValue();
 
-  useEffect(() => {
-    console.log(makeRequest());
-  }, []);
-
+ 
   // Entregamos el token y renderizamos la pagina
   useEffect(() => {
     const hash = getTokenFromUrl();
@@ -49,24 +45,24 @@ function App() {
         });
       });
 
-      spotify.getPlaylist('6YBNnMxHFtBMakBI3H2Jct').then(response => {
+      spotify.getPlaylist('6YBNnMxHFtBMakBI3H2Jct').then((new_releases) => {
         dispatch({
           type: 'SET_NEW_RELEASES',
-          new_releases: response,
+          new_releases: new_releases,
         });
       });
 
-      spotify.getFeaturedPlaylists().then(response => {
+      spotify.getFeaturedPlaylists().then((featured_playlists) => {
         dispatch({
           type: 'SET_FEATURED_PLAYLISTS',
-          featured_playlists: response,
+          featured_playlists: featured_playlists,
         });
       });
       
-      spotify.getCategories().then(response => {
+      spotify.getCategories().then((categories) => {
         dispatch({
           type: 'SET_CATEGORIES',
-          categories: response,
+          categories: categories,
         });
       });
       

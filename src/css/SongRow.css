@@ -1,23 +1,13 @@
-
-
 .songRow_card{
     margin-left: 20px;
     padding: 20px;
     width: 200px;
-    color: white !important;
-    background-color: #181818 !important; 
     transition: 0.2s ease-in-out !important;
 }
 
 .songRow_card:hover {
     cursor: pointer;
-    background-color: #282828 !important;
     
-}
-
-
-.songRow_info > h1 {
-    font-size: 16px;
 }
 
 .songRow_info {

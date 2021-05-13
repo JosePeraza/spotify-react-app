@@ -1,0 +1,167 @@
+/* ========== DARK THEME ========== */
+.dark_sidebar {
+    color: white;
+    background-color: #040404;
+}
+
+.dark_sidebarItem {
+    color: grey;
+}
+
+.dark_sidebarItem:hover {
+    color: white;
+}
+
+.dark_sidebar > hr {
+    border: 1px solid #282828;
+}
+
+.dark_body {
+    color: white;
+    background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1));
+}
+
+.dark_songRow_container > span {
+    color: #aaa;
+}
+
+.dark_header_left {
+    background-color: white;
+    color: grey;
+}
+
+.dark_header_left > input {
+    background-color: white;
+}
+
+.dark_songRow_card{
+    color: white !important;
+    background-color: #181818 !important; 
+}
+
+.dark_songRow_card:hover {
+    background-color: #282828 !important;
+    
+}
+
+.dark_songRow_info {
+    color: gray !important;
+}
+
+.dark_footer {
+    color: white;
+    background-color: #282828;
+}
+
+.dark_footer_right * .MuiSlider-root{
+    color: green;
+}
+
+.dark_footer_left {
+    color: white;
+}
+
+.dark_footer_center {
+    color: white;
+}
+
+.dark_footer_icon {
+    color: gray;
+}
+
+.dark_footer_icon:hover {
+    color: white;
+}
+
+.dark_footer_green:hover {
+    color:#70f89f;
+}
+
+.dark_footer_green {
+    color: #1ed15e;
+}
+
+
+/* ========== BRIGHT TEHEM ========== */
+
+.bright_header_left {
+    background-color: white;
+    color: grey;
+}
+
+.bright_header_left > input {
+    background-color: white;
+}
+
+.bright_sidebar {
+    color: black;
+    background-color: white;
+}
+
+.bright_sidebarItem {
+    color: black;
+}
+
+.bright_sidebarItem:hover {
+    color: grey;
+}
+
+.bright_sidebar > hr {
+    border: 1px solid #bcffd6;
+}
+
+.bright_header_left > input {
+    border: none;
+    width: 100%;
+}
+
+.bright_body {
+    color: white;
+    background: linear-gradient(rgba(117,164,120,1) 0%, rgba(215,255,217,1) 100%);
+}
+
+
+.bright_songRow_card{
+    background-color: rgb(240, 240, 240)!important; 
+}
+
+.bright_songRow_card:hover {
+    background-color: #bdbdbd !important;
+    
+}
+
+.bright_songRow_info {
+    color: gray !important;
+}
+
+
+.bright_footer {
+    color: white;
+    background-color: #bebebe;
+}
+
+.bright_footer_right * .MuiSlider-root{
+    color: green;
+}
+
+.bright_footer_left {
+    color: black;
+}
+
+.bright_footer_center {
+    color: black !important;
+}
+
+.bright_footer_icon {
+    color: rgb(88, 88, 88) !important;
+}
+
+
+
+.bright_footer_green:hover {
+    color:#1ed15e !important;
+}
+
+.bright_footer_green {
+    color: #148b3e !important;
+}

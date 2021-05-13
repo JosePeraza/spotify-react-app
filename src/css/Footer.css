@@ -6,8 +6,6 @@
     position: fixed;
     margin-bottom: -100;
     bottom: 0;
-    color: white;
-    background-color: #282828;
     padding: 20px;
 }
 
@@ -19,7 +17,6 @@
     flex: 0.3;
     display: flex;
     align-items: center;
-    color: white;
     width: 300px;
 }
 
@@ -32,27 +29,22 @@
 .footer_center {
     flex: 0.4;
     padding: 0 100px;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 300px;
 }
 
-.footer_icon {
-    color: gray;
-}
+
 
 .footer_icon:hover {
     transition: transform 0.1s ease-in-out;
     transform: scale(1.2) !important;
-    color: white;
 }
 
 .footer_green:hover {
     transition: transform 0.1s ease-in-out;
     transform: scale(1.2) !important;
-    color:#70f89f;
 }
 
 .footer_right {
@@ -63,7 +55,6 @@
 }
 
 .footer_green {
-    color: #1ed15e;
 }
 
 .footer_songInf > h4 {

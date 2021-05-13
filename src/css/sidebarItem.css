@@ -1,18 +1,12 @@
 .sidebarItem {
     align-items: center;
     display: flex;
-    color: grey;
     height: 40px;
     cursor: pointer;
     transition: 0.2s color ease-in;
 }
 
-.sidebarItem:hover {
-    color: white;
-}
-
 .sidebar > hr {
-    border: 1px solid #282828;
     width: 90%;
     margin: 10px auto;
 }
@@ -26,6 +20,7 @@
 .sidebarIcon {
     padding-left: 10px;
     padding-right: 10px;
+    
 }
 
 .sidebar_title {

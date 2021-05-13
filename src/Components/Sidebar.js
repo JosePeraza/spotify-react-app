@@ -1,5 +1,6 @@
 import React from 'react';
 import "../css/Sidebar.css";
+import "../css/Themes.css";
 import SidebarItem from './SidebarItem';
 import HomeIcon from '@material-ui/icons/Home';
 import SearchIcon from '@material-ui/icons/Search';
@@ -7,11 +8,11 @@ import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
 import { useDatalayerValue } from '../DataLayer';
 
 function Sidebar() {
-    const [{playlists}] = useDatalayerValue();
+    const [{playlists, lightmode}] = useDatalayerValue();
 
     return (
-        <div className="sidebar">
-            <img className="sidebar_logo" src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" alt="spotify logo" />
+        <div className={`sidebar ${lightmode === false ? `dark_sidebar`: `bright_sidebar`}`}>
+            <img className="sidebar_logo" src="https://logos-marcas.com/wp-content/uploads/2020/09/Spotify-Logo.png" alt="spotify logo" />
             <SidebarItem Icon={HomeIcon} title="Home"/>
             <SidebarItem Icon={SearchIcon} title="Search"/>
             <SidebarItem Icon={LibraryMusicIcon} title="Your Library"/>

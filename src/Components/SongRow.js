@@ -3,14 +3,16 @@ import '../css/SongRow.css'
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import { useDatalayerValue } from '../DataLayer';
 
 
 function SongRowItem({ image, title, artist, album }) {
+    const [{ lightmode }] = useDatalayerValue();
 
     return (
         
         <div className="songRow">
-            <Card className="songRow_card">
+            <Card className={`songRow_card ${lightmode === false ? `dark_songRow_card`: `bright_songRow_card`}`}>
                 <CardContent>
                     <img className="songRow_album" src={image} alt="" />
                 </CardContent>

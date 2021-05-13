@@ -2,9 +2,7 @@
     padding: 30px;
     flex: 0.8;
     height: 100vh;
-    color: white;
     overflow-y: overlay;
-    background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1));
 }
 
 .body::-webkit-scrollbar {
@@ -45,7 +43,7 @@
 
 .body_songs {
     margin: 20px -30px;
-    margin-bottom: -1000px ;
+    margin-bottom: -100px ;
 }
 
 .body_shuffle:hover {
@@ -72,20 +70,16 @@
     overflow-y: auto;
 }
 
-.songRow_container > strong{
-        z-index: 2;
-        padding: 4px 8px;
-}
-
-.songRow_container > span {
-        font-size: .7em;
-        color: #aaa;
-        margin-left: 10px;
-}
-
 .songRow_container > h2 {
     padding-left: 20px;
     padding-bottom: 10px;
+}
+
+.outer_line {
+    width: 100%;
+    border-bottom: 2px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 
