@@ -33,7 +33,7 @@ function Body({ spotify }) {
                     <MoreHorizIcon />
                 </div>
                 <div className="songRow_container">
-                    <h2><strong>New Releases</strong><span className="outer_line"></span></h2>
+                    <h2><strong>New Releases</strong><span className={`outer_line ${lightmode === false ? `dark_outer_line`: `bright_outer_line`}`}></span></h2>
                     <div className="body_songRow">
                         {new_releases?.tracks.items.map(item => (
                             <SongRowItem key={item.id} 
@@ -45,7 +45,7 @@ function Body({ spotify }) {
                     </div>
                 </div>
                 <div className="songRow_container">
-                    <h2><strong>Featured Playlists</strong><span className="outer_line"></span></h2>
+                    <h2><strong>Featured Playlists</strong><span className={`outer_line ${lightmode === false ? `dark_outer_line`: `bright_outer_line`}`}></span></h2>
                     <div className="body_songRow">
                         {featured_playlists?.playlists.items.map(item => (
                             <SongRowItem key={item.id}
@@ -55,7 +55,7 @@ function Body({ spotify }) {
                     </div>
                 </div>
                 <div className="songRow_container">
-                    <h2><strong>Categories</strong><span className="outer_line"></span></h2>
+                    <h2><strong>Categories</strong><span className={`outer_line ${lightmode === false ? `dark_outer_line`: `bright_outer_line`}`}></span></h2>
                     <div className="body_songRow">
                         {categories?.categories.items.map(item => (
                             <SongRowItem key={item.id}

@@ -77,7 +77,6 @@
 
 .outer_line {
     width: 100%;
-    border-bottom: 2px solid #ddd;
     display: inline-block;
     vertical-align: middle;
 }
