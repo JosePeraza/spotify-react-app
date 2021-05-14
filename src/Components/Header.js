@@ -8,8 +8,6 @@ import { useDatalayerValue } from '../DataLayer';
 import Switch from '@material-ui/core/Switch';
 import { withStyles } from '@material-ui/core/styles';
 import { grey } from '@material-ui/core/colors';
-import FormControl from '@material-ui/core/FormControl';
-import { SettingsOverscanSharp } from '@material-ui/icons';
 
 
 const GreySwitch = withStyles({
