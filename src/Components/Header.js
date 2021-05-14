@@ -8,6 +8,8 @@ import { useDatalayerValue } from '../DataLayer';
 import Switch from '@material-ui/core/Switch';
 import { withStyles } from '@material-ui/core/styles';
 import { grey } from '@material-ui/core/colors';
+import FormControl from '@material-ui/core/FormControl';
+import { SettingsOverscanSharp } from '@material-ui/icons';
 
 
 const GreySwitch = withStyles({
@@ -29,6 +31,7 @@ function Header() {
     const [{ user, lightmode }, dispatch] = useDatalayerValue();
 
     const [state, setState] = useState({checkedA: false});
+    const [search, setSerch] = useState("");
 
 
     const handleChange = (event) => {
@@ -50,8 +53,11 @@ function Header() {
     return (
         <div className={`header ${lightmode === false ? ``: `bright_header`}`}>
             <div className={`header_left ${lightmode === false ? `dark_header_left`: `bright_header_left`}`}>
+            <form className="" noValidate autoComplete="off">
                 <SearchIcon />
-                <input placeholder="Search for Artists, Songs, or Podcasts" type="text" />
+                <input className="header_left_input" value={search} onchange={e => setSerch(e.target.value)} placeholder="Search for Artists, Songs, or Podcasts" type="text" />
+            </form>
+                
             </div>
             <div className="header_right">
             <h4>Switch to{lightmode === false ? ` light `: ` dark `}mode</h4>

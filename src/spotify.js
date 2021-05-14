@@ -1,7 +1,8 @@
 export const authEndpoint = 'https://accounts.spotify.com/authorize';
-const redirectUri = "https://blissful-pasteur-d0933a.netlify.app/";
+const redirectUri = "https://spotify-react-app-sunwise.netlify.app/";
 const clientId = "d3a1dbdcd3664b8fb4101206df01c0e0";
 
+//Utilize el metodo de autenticacion "Implicit Grant Flow" debido a que al pasar la clave de usuario privada en el request cors me bloqueaba la peticion
 
 // Permisos que le das al usuario en tu aplicacion
 const scopes = [

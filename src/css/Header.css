@@ -9,16 +9,20 @@
     min-width: 70px;
     border-radius: 30px;
     padding: 10px;
-    display: flex;
-    align-items: center;
 }
 
-.header_left > input {
+.header_left > form {
+    display: flex;
+    align-items: center;
+
+}
+
+.header_left_input {
     border: none;
     width: 100%;
 }
 
-.header_left > input:focus-visible {
+.header_left_input:focus-visible {
     outline: none;
 }
 

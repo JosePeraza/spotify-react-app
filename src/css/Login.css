@@ -5,11 +5,12 @@
     background-color: black;
 }
 
-.login > img {
-    width: 100%;
+.login_img {
+    margin: auto;
 }
 
-.login > a {
+.login_link {
+    margin: auto;
     padding: 20px;
     border-radius: 99px;
     background-color: #1db954;
@@ -17,3 +18,4 @@
     color: white;
     text-decoration: none;
 }
+

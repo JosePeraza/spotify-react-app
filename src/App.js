@@ -15,7 +15,6 @@ function App() {
   const [{ token }, dispatch] = useDatalayerValue();
 
  
-  // Entregamos el token y renderizamos la pagina
   useEffect(() => {
     const hash = getTokenFromUrl();
     //ocultamos el token de nuestra URL
