@@ -1,5 +1,5 @@
 export const authEndpoint = 'https://accounts.spotify.com/authorize';
-const redirectUri = "https://blissful-pasteur-d0933a.netlify.app/";
+const redirectUri = "https://blissful-pasteur-d0933a.netlify.app/#";
 const clientId = "d3a1dbdcd3664b8fb4101206df01c0e0";
 
 
