@@ -8,7 +8,10 @@ import Sidebar from "./Sidebar";
 import Body from "./Body";
 import Footer from "./Footer";
 import "../css/Sidebar.css";
-import '../css/Themes.css'
+import '../css/Themes.css';
+import "../css/Drawer.css";
+import { useDatalayerValue } from '../DataLayer';
+
 
 const drawerWidth = 240;
 
@@ -38,6 +41,11 @@ const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
+    background: "black",
+  },
+  paper:{
+    width: drawerWidth,
+    background: "white",
   },
   content: {
     flexGrow: 1,
@@ -46,10 +54,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function ResponsiveDrawer(props) {
+  const [{ lightmode }] = useDatalayerValue();
   const { window, spotify } = props;
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -71,9 +81,7 @@ function ResponsiveDrawer(props) {
             anchor={theme.direction === 'rtl' ? 'right' : 'left'}
             open={mobileOpen}
             onClose={handleDrawerToggle}
-            classes={{
-              paper: classes.drawerPaper,
-            }}
+            classes={lightmode === false ?{paper: classes.drawerPaper,} : {paper: classes.paper,}}
             ModalProps={{
               keepMounted: true, // Better open performance on mobile.
             }}
@@ -83,9 +91,7 @@ function ResponsiveDrawer(props) {
         </Hidden>
         <Hidden xsDown implementation="css">
           <Drawer
-            classes={{
-              paper: classes.drawerPaper,
-            }}
+            classes={lightmode === false ?{paper: classes.drawerPaper,} : {paper: classes.paper,}}
             variant="permanent"
             open
           >

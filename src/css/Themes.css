@@ -84,8 +84,15 @@
 .dark_outer_line {
     border-bottom: 2px solid grey;
 }
+.dark_MuiDrawer-paperAnchorLeft {
+    background-color: black;
+}
 
 /* ========== BRIGHT TEHEM ========== */
+
+.bright_MuiDrawer-paperAnchorLeft {
+    background-color: white;
+}
 
 .bright_outer_line {
     border-bottom: 2px solid white;

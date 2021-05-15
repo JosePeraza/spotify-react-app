@@ -10,6 +10,11 @@
     padding-bottom: 100px;
 }
 
+.MuiDrawer-paperAnchorLeft {
+    left: 0;
+    right: auto;
+    background-color: black;
+}
 
 @media (min-width: 600px){
     .makeStyles-drawer-2 {
