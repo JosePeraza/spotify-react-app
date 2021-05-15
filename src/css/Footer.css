@@ -1,13 +1,11 @@
 .footer {
     display: flex;
-    justify-content: space-between;
-    height: 65px;
-    width: 98%;
+    justify-content: flex-start;
+    width: 100%;
     position: fixed;
-    margin-bottom: -100;
     bottom: 0;
     padding: 20px;
-    z-index: 10;
+    box-sizing: content-box;
 }
 
 .footer_right * .MuiSlider-root{
@@ -49,13 +47,9 @@
 }
 
 .footer_right {
-    flex: 0.3;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.footer_green {
 }
 
 .footer_songInf > h4 {
@@ -64,4 +58,8 @@
 
 .footer_songInf > p {
     font-size: 12px;
+}
+
+.footer_slider {
+    padding-right: 30px;
 }

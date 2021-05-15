@@ -1,7 +1,26 @@
+.header_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+
+}
+
 .header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    flex: auto;
+}
+
+.header_icon{
+    cursor: pointer;
+    margin: 0px 10px;
+    transition: 0.2s ease-in !important;
+}
+
+.header_icon:hover{
+    color:#bebebe;
 }
 
 .header_left {
@@ -33,4 +52,10 @@
 
 .header_right > h4 {
     margin-left: 10px;
+}
+
+@media(min-width: 964px) {
+    .header_icon {
+        display: none !important;
+    }
 }

@@ -8,12 +8,12 @@ import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import { useDatalayerValue } from '../DataLayer';
 import SongRowItem from './SongRow';
 
-function Body({ spotify }) {
+function Body({ spotify, handleDrawerToggle }) {
     const [{ new_releases, categories, featured_playlists, lightmode }] = useDatalayerValue();
 
     return (
         <div className={`body ${lightmode === false ? `dark_body`: `bright_body`}`}>
-            <Header spotify={spotify}/>
+            <Header spotify={spotify} toggleButton={handleDrawerToggle}/>
 
             <div className="body_info">
                 <img src={new_releases?.images[0].url} alt="" />

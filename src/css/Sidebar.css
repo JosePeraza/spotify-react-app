@@ -1,12 +1,11 @@
 .sidebar {
-    height: 100vp;
+    height: auto;
     display: flex;
     flex-direction: column;
     flex: 0.2;
     min-width: 230px;
     padding-left: 10px;
     padding-right: 10px;
-    overflow-y:visible;
 }
 
 .sidebar_logo {
@@ -14,4 +13,9 @@
     height: 70px;
     padding: 10px;
 }
+
+.body::-webkit-scrollbar {
+    display: none;
+}
+
 

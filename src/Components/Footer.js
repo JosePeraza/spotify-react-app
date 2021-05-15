@@ -39,7 +39,7 @@ function Footer() {
                     <Grid item>
                         <VolumeDownIcon />
                     </Grid>
-                    <Grid item xs>
+                    <Grid className="footer_slider" item>
                         <Slider />
                     </Grid>
                 </Grid>

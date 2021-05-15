@@ -3,3 +3,21 @@
     height: 100%;
     margin-bottom: 100px ;
 }
+
+.makeStyles-content-88 {
+    flex-grow: 1;
+    overflow-y: overlay;
+    padding-bottom: 100px;
+}
+
+
+@media (min-width: 600px){
+    .makeStyles-drawer-2 {
+        width: 240px;
+        flex-shrink: 0;
+        
+    }
+    .makeStyles-drawer-2::-webkit-scrollbar {
+        display: none;
+    }
+}
