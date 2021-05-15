@@ -1,6 +1,6 @@
 .footer {
     display: flex;
-    justify-content: flex-start;
+    justify-content: ;
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -47,9 +47,7 @@
 }
 
 .footer_right {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: none;
 }
 
 .footer_songInf > h4 {
@@ -60,6 +58,10 @@
     font-size: 12px;
 }
 
-.footer_slider {
-    padding-right: 30px;
+@media(min-width: 964px) {
+    .footer_right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
